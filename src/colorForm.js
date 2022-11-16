@@ -1,12 +1,14 @@
 import React, { useState } from "react"
 
 function ColorForm(props) {
+
     let [input, setInput] = useState('')
 
     const handleSubmit = (e) => {
         // Prevent default behavior of the form
         e.preventDefault()
         props.addColor(input)
+        e.target.reset()
     }
 
     return (
